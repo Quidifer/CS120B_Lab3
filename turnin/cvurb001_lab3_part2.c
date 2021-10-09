@@ -18,7 +18,6 @@ int main(void) {
     DDRC = 0xFF; PORTC = 0x00; //outputs
 
     unsigned char fuel_level = 0x00;
-    unsigned char driver_state = 0x00;
     while(1) {
 
         fuel_level = PINA & 0x0F;
@@ -59,8 +58,6 @@ int main(void) {
         if (fuel_level <= 4) {
             PORTC = PORTC | 0x40;
         }
-
-        driver_state = PINA & 0xF0;
     }
     return 1;
 }
