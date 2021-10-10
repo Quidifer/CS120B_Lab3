@@ -24,11 +24,12 @@ int main(void) {
     while(1) {
         weight = (PIND << 1) + (PINB & 0x01);
 
+        PORTB = 0x0;
         if (weight >= 70) {
-            PORTB = PORTB | 0x02;
+            PORTB = (PORTB & 0xF0) | 0x02;
         }
         if (weight > 5 && weight < 70) {
-            PORTB = PORTB | 0x04;
+            PORTB = (PORTB & 0xF0) | 0x04;
         }
     }
     return 1;
