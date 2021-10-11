@@ -27,81 +27,37 @@ echo ======================================================\n
 echo Running all tests..."\n\n
 
 #-----------------
-test "PINA: 1 => PINC: 0x60"
-setPINA 0x01
+test "PINA: 0x0F => PINB: 0x00, PINC: 0xF0"
+setPINA 0x0F
 continue 2
-expectPORTC 0x60
+expectPORTB 0x00
+expectPORTC 0xF0
 checkResult
 
-#-----------------
-test "PINA: 2 => PINC: 0x60"
-setPINA 0x02
+#----------------
+test "PINA: 0x85 => PINB: 0x08, PINC: 0x50"
+setPINA 0x85
 continue 2
-expectPORTC 0x60
+expectPORTB 0x08
+expectPORTC 0x50
 checkResult
 
-#-----------------
-test "PINA: 3 => PINC: 0x70"
-setPINA 0x03
+#----------------
+test "PINA: 0x8A => PINB: 0x08, PINC: 0xA0"
+setPINA 0x8A
 continue 2
-expectPORTC 0x70
+expectPORTB 0x08
+expectPORTC 0xA0
 checkResult
 
-#-----------------
-test "PINA: 4 => PINC: 0x70"
-setPINA 0x01
+#----------------
+test "PINA: 0x35 => PINB: 0x03, PINC: 0x50"
+setPINA 0x35
 continue 2
-expectPORTC 0x70
+expectPORTB 0x03
+expectPORTC 0x50
 checkResult
 
-#-----------------
-test "PINA: 5 => PINC: 0x38"
-setPINA 0x05
-continue 2
-expectPORTC 0x38
-checkResult
-
-#-----------------
-test "PINA: 6 => PINC: 0x38"
-setPINA 0x06
-continue 2
-expectPORTC 0x38
-checkResult
-
-#-----------------
-test "PINA: 7 => PINC: 0x3C"
-setPINA 0x07
-continue 2
-expectPORTC 0x3C
-checkResult
-
-#-----------------
-test "PINA: 8 => PINC: 0x3C"
-setPINA 0x08
-continue 2
-expectPORTC 0x3C
-checkResult
-
-#-----------------
-test "PINA: 9 => PINC: 0x3C"
-setPINA 0x09
-continue 2
-expectPORTC 0x3C
-checkResult
-
-#-----------------
-test "PINA: 10 => PINC: 0x3E"
-setPINA 0x0A
-continue 2
-expectPORTC 0x3E
-checkResult
-
-#-----------------
-test "PINA: 13 => PINC: 0x3F"
-setPINA 0x0D
-continue 2
-expectPORTC 0x3F
-checkResult
 
 
 

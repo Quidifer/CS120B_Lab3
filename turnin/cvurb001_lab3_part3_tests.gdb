@@ -33,74 +33,95 @@ continue 2
 expectPORTC 0x60
 checkResult
 
-#-----------------
-test "PINA: 2 => PINC: 0x60"
+#------------------
+test "PINA: 2 => PINC => 0x60"
 setPINA 0x02
 continue 2
-expectPORTC 0x60
+expect PORTC 0x60
 checkResult
 
-#-----------------
+#----------------
 test "PINA: 3 => PINC: 0x70"
 setPINA 0x03
 continue 2
 expectPORTC 0x70
 checkResult
 
-#-----------------
+#--------------------
 test "PINA: 4 => PINC: 0x70"
-setPINA 0x01
+setPINA 0x04
 continue 2
 expectPORTC 0x70
 checkResult
 
-#-----------------
+#----------------------
 test "PINA: 5 => PINC: 0x38"
 setPINA 0x05
 continue 2
 expectPORTC 0x38
 checkResult
 
-#-----------------
+#----------------------
 test "PINA: 6 => PINC: 0x38"
 setPINA 0x06
-continue 2
+continue 2 
 expectPORTC 0x38
 checkResult
 
-#-----------------
+#----------------------
 test "PINA: 7 => PINC: 0x3C"
 setPINA 0x07
-continue 2
+continue 2 
 expectPORTC 0x3C
 checkResult
 
-#-----------------
+#----------------------
 test "PINA: 8 => PINC: 0x3C"
 setPINA 0x08
-continue 2
+continue 2 
 expectPORTC 0x3C
 checkResult
 
-#-----------------
+#----------------------
 test "PINA: 9 => PINC: 0x3C"
 setPINA 0x09
-continue 2
+continue 2 
 expectPORTC 0x3C
 checkResult
 
-#-----------------
+#----------------------
 test "PINA: 10 => PINC: 0x3E"
 setPINA 0x0A
-continue 2
+continue 2 
 expectPORTC 0x3E
 checkResult
 
-#-----------------
+#----------------------
+test "PINA: 11 => PINC: 0x3E"
+setPINA 0x0B
+continue 2 
+expectPORTC 0x3E
+checkResult
+
+#----------------------
 test "PINA: 13 => PINC: 0x3F"
 setPINA 0x0D
-continue 2
+continue 2 
 expectPORTC 0x3F
+checkResult
+
+#----------------------
+test "PINA: 0x70 => PINC: 0xC0"
+setPINA 0x70
+continue 2 
+expectPORTC 0xC0
+checkResult
+
+#----------------------
+test "PINA: 0x60 => PINC: 0x40"
+setPINA 0x60
+continue 2 
+expectPORTC 0x40
 checkResult
 
 
